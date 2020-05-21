@@ -1,12 +1,17 @@
 import React from "react";
 
-export function Form() {
-  return (
-    <form>
-      <div>
-        <label>Name</label>
-        <input name="name" value="name" />
-      </div>
-    </form>
-  );
-}
+export const Form = (props: any) => {
+  return <form {...props}>{props.children}</form>;
+};
+
+export const FormLabel = (props: any) => {
+  return <label>{props.children}</label>;
+};
+
+export const FormInputs = (props: any) => {
+  return <input {...props} />;
+};
+
+export const Button = (props: any) => {
+  return <button {...props}>{props.children}</button>;
+};
